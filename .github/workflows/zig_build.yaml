@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2024 Eric Joldasov
+# SPDX-License-Identifier: CC0-1.0
+
+name: Zig
+on:
+  merge_group:
+  push:
+    branches: "**"
+    paths-ignore:
+      - "LICENSE/**"
+      - "README.md"
+      - ".gitignore"
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - "LICENSE/**"
+      - "README.md"
+      - ".gitignore"
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, windows-2022, macos-15]
+    name: Build for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout last commit
+        uses: actions/checkout@e3d2460bbb42d7710191569f88069044cfb9d8cf
+        with:
+          persist-credentials: false
+      - name: Setup Python 3.11
+        uses: actions/setup-python@8039c45ed9a312fba91f3399cd0605ba2ebfe93c
+        with:
+          python-version: '3.11'
+      - name: Setup Zig nightly
+        uses: mlugg/setup-zig@2c3a1fdbc14f58ca9f6136d76888c17017e1404d
+        with:
+          version: master
+      - run: zig build test -Dpython-version="3.11"
