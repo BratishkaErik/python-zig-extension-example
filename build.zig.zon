@@ -3,13 +3,14 @@
 // SPDX-License-Identifier: 0BSD
 
 .{
-    .name = "python-zig-extension-example",
+    .name = .python_zig_extension_example,
     .version = "0.1.0",
+    .fingerprint = 0x3b2d6d62f68353f4,
 
     .dependencies = .{
         .zig_python = .{
-            .url = "git+https://github.com/BratishkaErik/zig-python?ref=main#d8858f690b70185819733a8fd2734f7345957b2b",
-            .hash = "122003ceda9fdb3991464a08382a7d05c63e4c602efd7940922b973c16f38cbc8718",
+            .url = "git+https://github.com/BratishkaErik/zig-python?ref=main#b713ce568697e2894a1e379c7a6622e15bf06ec2",
+            .hash = "zig_python-0.1.0-pmVyxDUzAABTIGwh8Z4eefV_21yFYMvtW4b1eeZOVM0K",
         },
     },
 

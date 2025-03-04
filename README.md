@@ -12,7 +12,7 @@ Example on how to build and test a Python extension written in Zig.
 This example uses `translate-c/@cImport` and [zig-python](https://github.com/BratishkaErik/zig-python)
 build plugin to automatically link Python library and generate bindings.
 
-Tested with Zig version `0.14.0-dev.3237+ddff1fa4c`. CI is run for Linux, Windows and macOS.
+Tested with Zig version `0.14.0-dev.3460+6d29ef0ba`. CI is run for Linux, Windows and macOS.
 
 ## Usage
 

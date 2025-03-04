@@ -43,7 +43,7 @@ pub fn build(b: *std.Build) void {
 
         const install_extension = b.addInstallLibFile(
             extension_lib.getEmittedBin(),
-            if (target.result.isDarwin())
+            if (target.result.os.tag.isDarwin())
                 "module_name.so" // instead of usual .dylib
             else if (target.result.os.tag == .windows)
                 "module_name.pyd" // instead of usual .lib
