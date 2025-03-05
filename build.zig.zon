@@ -9,7 +9,7 @@
 
     .dependencies = .{
         .zig_python = .{
-            .url = "git+https://github.com/BratishkaErik/zig-python?ref=main#b713ce568697e2894a1e379c7a6622e15bf06ec2",
+            .url = "git+https://github.com/BratishkaErik/zig-python?ref=main#5f34e2b7e72508a9afde853abaf30dd821cc64cf",
             .hash = "zig_python-0.1.0-pmVyxDUzAABTIGwh8Z4eefV_21yFYMvtW4b1eeZOVM0K",
         },
     },
