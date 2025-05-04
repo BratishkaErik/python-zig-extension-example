@@ -5,8 +5,9 @@
 .{
     .name = .python_zig_extension_example,
     .version = "0.1.0",
-    .fingerprint = 0x3b2d6d62f68353f4,
+    .fingerprint = 0x3b2d6d62_f68353f4,
 
+    .minimum_zig_version = "0.14.0",
     .dependencies = .{
         .zig_python = .{
             .url = "git+https://github.com/BratishkaErik/zig-python?ref=main#5f34e2b7e72508a9afde853abaf30dd821cc64cf",
