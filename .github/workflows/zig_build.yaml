@@ -16,6 +16,10 @@ on:
       - "LICENSE/**"
       - "README.md"
       - ".gitignore"
+
+permissions:
+  contents: read
+
 jobs:
   build:
     strategy:
